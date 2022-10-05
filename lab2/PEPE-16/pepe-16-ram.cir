@@ -1,0 +1,425 @@
+{
+  "comment" : "This is a JSON file describing a digital circuit, which can be loaded into the SEPE (Simulador Especial Para Ensino), a computer architecture simulator.",
+  "savedWithSimulatorVersion" : "2.1.0",
+  "savedWithSimulatorBuildOn" : "2022-05-11  at  20:18:52",
+  "editorLocked" : true,
+  "startAutomatically" : true,
+  "showConnectionColors" : true,
+  "zoomScale" : 100,
+  "gridVisible" : true,
+  "primary screen width" : 1920,
+  "primary screen height" : 1080,
+  "window" : {
+    "X absolute" : 333,
+    "Y absolute" : 194,
+    "X relative" : 333,
+    "Y relative" : 194,
+    "width" : 1110,
+    "height" : 691,
+    "leftRightDividerLocation" : 281,
+    "topBottomDividerLocation" : 507
+  },
+  "connections" : [ {
+    "className" : "Connection",
+    "elementID" : 25,
+    "name" : "Connection_ID:25",
+    "numberOfBits" : 16,
+    "segments" : [ {
+      "sourcePinID" : 18,
+      "targetPinID" : 6,
+      "points" : [ {
+        "X" : 277,
+        "Y" : 103
+      }, {
+        "X" : 430,
+        "Y" : 103
+      }, {
+        "X" : 430,
+        "Y" : 143
+      }, {
+        "X" : 455,
+        "Y" : 143
+      } ]
+    } ]
+  }, {
+    "className" : "Connection",
+    "elementID" : 26,
+    "name" : "Connection_ID:26",
+    "numberOfBits" : 1,
+    "segments" : [ {
+      "sourcePinID" : 20,
+      "targetPinID" : 7,
+      "points" : [ {
+        "X" : 278,
+        "Y" : 183
+      }, {
+        "X" : 455,
+        "Y" : 183
+      } ]
+    } ]
+  }, {
+    "className" : "Connection",
+    "elementID" : 27,
+    "name" : "Connection_ID:27",
+    "numberOfBits" : 1,
+    "segments" : [ {
+      "sourcePinID" : 19,
+      "targetPinID" : 5,
+      "points" : [ {
+        "X" : 277,
+        "Y" : 203
+      }, {
+        "X" : 455,
+        "Y" : 203
+      } ]
+    } ]
+  }, {
+    "className" : "Connection",
+    "elementID" : 28,
+    "name" : "Connection_ID:28",
+    "numberOfBits" : 1,
+    "segments" : [ {
+      "sourcePinID" : 21,
+      "targetPinID" : 8,
+      "points" : [ {
+        "X" : 278,
+        "Y" : 223
+      }, {
+        "X" : 455,
+        "Y" : 223
+      } ]
+    } ]
+  }, {
+    "className" : "Connection",
+    "elementID" : 29,
+    "name" : "Connection_ID:29",
+    "numberOfBits" : 16,
+    "segments" : [ {
+      "sourcePinID" : 17,
+      "targetPinID" : 3,
+      "points" : [ {
+        "X" : 277,
+        "Y" : 143
+      }, {
+        "X" : 382,
+        "Y" : 143
+      }, {
+        "X" : 382,
+        "Y" : 80
+      }, {
+        "X" : 638,
+        "Y" : 80
+      }, {
+        "X" : 638,
+        "Y" : 143
+      }, {
+        "X" : 572,
+        "Y" : 143
+      } ]
+    } ]
+  } ],
+  "modules" : [ {
+    "className" : "ModuleRAM",
+    "elementID" : 0,
+    "name" : "RAM",
+    "numberOfBits" : 16,
+    "moduleDelay" : 5,
+    "positionX" : 460,
+    "positionY" : 128,
+    "simGuiVisibleInSimulation" : false,
+    "addressable data" : {
+      "className" : "ModuleExtensionMemory",
+      "elementID" : 1,
+      "name" : "ModuleExtensionMemory_ID:1",
+      "numberOfBits" : 16,
+      "nWordParts" : 2,
+      "endianness" : "Big-Endian",
+      "addressNBits" : 12
+    },
+    "bus interface" : {
+      "className" : "ModuleExtensionSlaveBusReadWrite",
+      "elementID" : 2,
+      "name" : "ModuleExtensionSlaveBusReadWrite_ID:2",
+      "numberOfBits" : 16,
+      "dataBusPin" : {
+        "className" : "InOutPin",
+        "elementID" : 3,
+        "name" : "DATA",
+        "numberOfBits" : 16,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 29
+      },
+      "csPin" : {
+        "className" : "InPin",
+        "elementID" : 4,
+        "name" : "CS",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "CIRCLE",
+        "pinConnectionID" : -1,
+        "pinValueFixed" : "0"
+      },
+      "swaPin" : {
+        "className" : "InPin",
+        "elementID" : 5,
+        "name" : "SWA",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 27,
+        "pinValueFixed" : "-"
+      },
+      "addressBusPin" : {
+        "className" : "InPin",
+        "elementID" : 6,
+        "name" : "ADDRESS",
+        "numberOfBits" : 12,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 25,
+        "pinValueFixed" : "-"
+      },
+      "rdPin" : {
+        "className" : "InPin",
+        "elementID" : 7,
+        "name" : "RD",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "CIRCLE",
+        "pinConnectionID" : 26,
+        "pinValueFixed" : "-"
+      },
+      "wrPin" : {
+        "className" : "InPin",
+        "elementID" : 8,
+        "name" : "WR",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "CIRCLE",
+        "pinConnectionID" : 28,
+        "pinValueFixed" : "-"
+      }
+    }
+  }, {
+    "className" : "ModulePEPE16",
+    "elementID" : 9,
+    "name" : "PEPE-16",
+    "numberOfBits" : 16,
+    "moduleDelay" : 5,
+    "positionX" : 130,
+    "positionY" : 88,
+    "simGuiVisibleInSimulation" : false,
+    "clockPeriod" : 200,
+    "startAutomatically" : false,
+    "simulationMaster" : true,
+    "clockIsExternal" : false,
+    "clockInPin" : {
+      "className" : "InPin",
+      "elementID" : 16,
+      "name" : "CLOCK_IN",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "-"
+    },
+    "resetPin" : {
+      "className" : "InPin",
+      "elementID" : 10,
+      "name" : "RESET",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "CIRCLE",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "1"
+    },
+    "nTabSpaces" : 4,
+    "textEncoding" : "UTF-8",
+    "bus interface" : {
+      "className" : "ModuleExtensionMasterBusReadWrite",
+      "elementID" : 30,
+      "name" : "ModuleExtensionMasterBusReadWrite_ID:30",
+      "numberOfBits" : 16,
+      "dataBusPin" : {
+        "className" : "InOutPin",
+        "elementID" : 17,
+        "name" : "DATA",
+        "numberOfBits" : 16,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 29
+      },
+      "rdPin" : {
+        "className" : "TristateOutPin",
+        "elementID" : 20,
+        "name" : "RD",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "CIRCLE",
+        "pinConnectionID" : 26
+      },
+      "wrPin" : {
+        "className" : "TristateOutPin",
+        "elementID" : 21,
+        "name" : "WR",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "CIRCLE",
+        "pinConnectionID" : 28
+      },
+      "addressBusPin" : {
+        "className" : "TristateOutPin",
+        "elementID" : 18,
+        "name" : "ADDRESS",
+        "numberOfBits" : 16,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 25
+      },
+      "swaPin" : {
+        "className" : "TristateOutPin",
+        "elementID" : 19,
+        "name" : "SWA",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : 27
+      },
+      "endianness" : "Big-Endian",
+      "waitPin" : {
+        "className" : "InPin",
+        "elementID" : 22,
+        "name" : "WAIT",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : -1,
+        "pinValueFixed" : "0"
+      },
+      "busGrantPin" : {
+        "className" : "OutPin",
+        "elementID" : 23,
+        "name" : "BUS_GRANT",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "RIGHT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : -1
+      },
+      "busReqPin" : {
+        "className" : "InPin",
+        "elementID" : 24,
+        "name" : "BUS_REQ",
+        "numberOfBits" : 1,
+        "pinStartBit" : 0,
+        "connStartBit" : 0,
+        "pinSide" : "LEFT",
+        "pinShape" : "RECT",
+        "pinConnectionID" : -1,
+        "pinValueFixed" : "0"
+      },
+      "delay_Ta" : 1,
+      "delay_Td" : 2,
+      "delay_Tr" : 1,
+      "delay_Tw" : 1
+    },
+    "cache" : {
+      "className" : "ModuleExtensionDirectMappedCache",
+      "elementID" : 31,
+      "name" : "ModuleExtensionDirectMappedCache_ID:31",
+      "numberOfBits" : 16,
+      "cacheNLines" : 0,
+      "cacheBlockNWords" : 1,
+      "cacheCapacityWordsFixed" : false,
+      "accessTimeRatio" : 1,
+      "accumulateAccessStatistics" : false,
+      "currentAccessesUpdateSpeed" : "Very fast"
+    },
+    "interruptPinsArray" : [ {
+      "className" : "InPin",
+      "elementID" : 11,
+      "name" : "INT0",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "-"
+    }, {
+      "className" : "InPin",
+      "elementID" : 12,
+      "name" : "INT1",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "-"
+    }, {
+      "className" : "InPin",
+      "elementID" : 13,
+      "name" : "INT2",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "-"
+    }, {
+      "className" : "InPin",
+      "elementID" : 14,
+      "name" : "INT3",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "LEFT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1,
+      "pinValueFixed" : "-"
+    } ],
+    "intAckPin" : {
+      "className" : "OutPin",
+      "elementID" : 15,
+      "name" : "INT_ACK",
+      "numberOfBits" : 1,
+      "pinStartBit" : 0,
+      "connStartBit" : 0,
+      "pinSide" : "RIGHT",
+      "pinShape" : "RECT",
+      "pinConnectionID" : -1
+    }
+  } ]
+}
